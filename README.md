@@ -1,3 +1,13 @@
+## Train an ArtIAMAS model with various size
+1. mavericks use yolov5s
+1. make sure the input image size is passed in (e.g., 320)
+`python train.py --data data.yaml --epochs 1 --weights yolov5s.pt --img 320`
+
+## Export to TFlite 
+1.  change input image size to 320
+`python export.py --img 320 --weights runs/train/exp_960/weights/best.pt --include torchscript tflite` 
+``
+`python detect.py --weights runs/train/exp_960/weights/best.pt --source img.jpg`
 <div align="center">
   <p>
     <a href="https://yolovision.ultralytics.com/" target="_blank">
