@@ -5,7 +5,7 @@
 
 ## Export to TFlite 
 1.  change input image size to 320
-`python export.py --img 320 --weights runs/train/exp_960/weights/best.pt --include torchscript tflite` 
+`python export.py --img 320 --weights runs/train/exp_960/weights/best.pt --include tflite` 
 ``
 `python detect.py --weights runs/train/exp_960/weights/best.pt --source img.jpg`
 <div align="center">
