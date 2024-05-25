@@ -15,7 +15,7 @@ ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
 # Path to the PyTorch model and TFLite model
 torch_model_path = ROOT / 'best.pt'
-tflite_model_path = ROOT / 'best-fp16.tflite'
+tflite_model_path = ROOT / 'best-fp16_arl.tflite'
 
 # Load your PyTorch model
 model = attempt_load(torch_model_path, device=None, inplace=True, fuse=True)

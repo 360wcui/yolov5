@@ -8,7 +8,7 @@ np_input_tflite = np_input.reshape((1, 640, 640, 3))
 
 print(np_input.dtype)
 
-TFLITE_FILE_PATH = 'best-fp16.tflite'
+TFLITE_FILE_PATH = 'best-fp16_arl.tflite'
 TORCH_FILE_PATH = 'best.pt'
 
 # Load the TFLite model in TFLite Interpreter

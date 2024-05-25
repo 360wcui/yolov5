@@ -3,6 +3,18 @@
 1. make sure the input image size is passed in (e.g., 320)
 `python train.py --data data.yaml --epochs 1 --weights yolov5s.pt --img 320`
 
+
+## Validate an ArtIAMAS model with various input size
+1. Training a yolo model is an iterative process,  so far,  we have trained four models: `best-fp16_arl.tflite`, `best-fp16_2023_12.tflite`,`umd_m320best-fp16_2024_03.tflite`,  and `umd_s480-fp16_2024_03.tflite` was the default MAVericks model provided by ARL. 
+1. `data_480.yaml` and `data_320.yaml` contain the validation sets that are collected on May 21 2024.   The datasets are not used in training.  
+1. To run a validation set, example command: 
+`python val.py --weights models/umd_s480-fp16.tflite --data data_480.yaml --img 480`
+`--img 480` is the input size for the yolo model,  only `umd_s480-fp16.tflite` is 480,  all other models are 320. e.g.,
+1. `python val.py --weights models/umd_m320best-fp16_2024_03.tflite --data data_320.yaml --img 320`
+or
+2. `python val.py --weights models/best-fp16.tflite --data data_320.yaml --img 320`
+
+
 ## Export to TFlite 
 1.  change input image size to 320
 `python export.py --img 320 --weights runs/train/exp_960/weights/best.pt --include tflite` 
