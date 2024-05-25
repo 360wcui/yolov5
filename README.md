@@ -11,8 +11,8 @@
 `python val.py --weights models/umd_s480-fp16.tflite --data data_480.yaml --img 480`
 `--img 480` is the input size for the yolo model,  only `umd_s480-fp16.tflite` is 480,  all other models are 320. e.g.,
 1. `python val.py --weights models/umd_m320best-fp16_2024_03.tflite --data data_320.yaml --img 320`
-or
-2. `python val.py --weights models/best-fp16.tflite --data data_320.yaml --img 320`
+1. ARL default model contains 10 classes,  so we need a different yaml that has all the classes defined
+2. `python val.py --weights models/best-fp16_arl.tflite --data data_320_arl.yaml --img 320`
 
 
 ## Export to TFlite 
