@@ -1,0 +1,13 @@
+train: data/0614/train/images
+val: data/0614/valid/images
+test: data/0614/test/images
+
+nc: 1
+names: ['person']
+
+roboflow:
+  workspace: artiamas
+  project: project1.5
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/artiamas/project1.5/dataset/3
